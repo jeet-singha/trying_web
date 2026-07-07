@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Scroll-Driven Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scene-container" id="scene-container">
+        <canvas id="three-canvas"></canvas>
+    </div>
+
+    <nav class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Home">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                    <path d="M16 8L22 16L16 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>PREMIUM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#showcase" class="nav-link">Showcase</a></li>
+                <li><a href="#cta" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#cta" class="nav-cta">Get Started</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="content">
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="word">Premium</span>
+                    <span class="word">Experience</span>
+                </h1>
+                <p class="hero-subtitle" data-reveal="word">Scroll to discover the future of interactive 3D design</p>
+                <div class="hero-cta">
+                    <a href="#features" class="cta-button primary">
+                        <span>Explore Features</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#showcase" class="cta-button secondary">
+                        <span>View Showcase</span>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="section-header">
+                <h2 class="section-title" data-reveal="word">Innovative Features</h2>
+                <p class="section-subtitle" data-reveal="word">Cutting-edge technology meets elegant design</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card" data-index="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Rendering</h3>
+                    <p>Experience buttery-smooth 60fps animations powered by WebGL and Three.js</p>
+                </article>
+                <article class="feature-card" data-index="1">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Scroll-Driven Physics</h3>
+                    <p>Physics-based interactions that respond naturally to your scroll position</p>
+                </article>
+                <article class="feature-card" data-index="2">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Glossy Materials</h3>
+                    <p>Physically-based rendering with environment maps and subsurface scattering</p>
+                </article>
+                <article class="feature-card" data-index="3">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Flawless experience across all devices with adaptive quality settings</p>
+                </article>
+                <article class="feature-card" data-index="4">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Performance Optimized</h3>
+                    <p>Smart LOD system and frustum culling for maximum frame rates</p>
+                </article>
+                <article class="feature-card" data-index="5">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                    </div>
+                    <h3>Dynamic Lighting</h3>
+                    <p>Real-time global illumination with HDR environment maps</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="showcase" id="showcase">
+            <div class="showcase-content">
+                <div class="section-header">
+                    <h2 class="section-title" data-reveal="word">Interactive Showcase</h2>
+                    <p class="section-subtitle" data-reveal="word">Watch the object transform as you scroll</p>
+                </div>
+                <div class="showcase-stages">
+                    <div class="stage" data-stage="0">
+                        <span class="stage-number">01</span>
+                        <h3>Formation</h3>
+                        <p>Object assembles from particles</p>
+                    </div>
+                    <div class="stage" data-stage="1">
+                        <span class="stage-number">02</span>
+                        <h3>Materialization</h3>
+                        <p>Glossy surface emerges</p>
+                    </div>
+                    <div class="stage" data-stage="2">
+                        <span class="stage-number">03</span>
+                        <h3>Animation</h3>
+                        <p>Continuous morphing motion</p>
+                    </div>
+                    <div class="stage" data-stage="3">
+                        <span class="stage-number">04</span>
+                        <h3>Interaction</h3>
+                        <p>Responds to your input</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="cta">
+            <div class="cta-content">
+                <h2 data-reveal="word">Ready to Elevate Your Experience?</h2>
+                <p data-reveal="word">Join thousands of creators building the future</p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button primary">
+                        <span>Get Started Free</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#features" class="cta-button secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 8L22 16L16 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>PREMIUM</span>
+                </a>
+                <p>Building the future of interactive web experiences</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#showcase">Showcase</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Docs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Built with Three.js & GSAP ScrollTrigger</p>
+            <p>&copy; 2025 Premium. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+            "gsap": "https://unpkg.com/gsap@3.12.5/index.js",
+            "gsap/ScrollTrigger": "https://unpkg.com/gsap@3.12.5/ScrollTrigger.js"
+        }
+    }
+    </script>
+    <script type="module" src="app.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
